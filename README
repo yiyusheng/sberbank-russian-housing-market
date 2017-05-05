@@ -1,1 +1,11 @@
 START on 05/03/2017
+
+Day1:
+In the first glance of the data, there are so many attributes of each of the three datasets. 291 attributes in train and test and 100 attributes in macro. I need to divide them in to groups.
+
+What's more, I checked the timestamp and find timestamp of train + test lasts from 2011-08-20 to 2016-05-30. The timestamp of macro expands to 2010-01-01 to 2016-10-19. It sounds good.
+
+Day2:
+To learn more before coding, I read Kernels of the competetion. In Rboberto Ruiz's report (Dealing with multicollinearity), the large amount of independent variables is mentioned. "Adding irrelevant variables will degrade the performance of the models", he said. So he gives a method to check the multicollinearity of independent variables called VIF (variabcnce inflation factor).
+                                                                                            
+VIF of a regression coefficient is 1/(1-R^2). The small the regression coefficient is, the larger the VIF is. A small regression coefficient means the corresponding independent variable contributes little to the dependent variable or there exists some other independent variables can compose of this independent variable. No matter which reason is, this independent variable has no reason to exist. So we can use VIF to exclude inrelevant independent variables.
